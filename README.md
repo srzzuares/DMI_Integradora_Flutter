@@ -19,8 +19,8 @@
 | :------------: |
 |  Daniela Alvarez Ramirez 
 Marco Antonio Rosas Gonzalez 
-Alfredo Solis Sanchez Crystian 
-Enrique Suarez Cuevas| 
+Alfredo Solis Sanchez 
+Crystian Enrique Suarez Cuevas| 
 
 
 
