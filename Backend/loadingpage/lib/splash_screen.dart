@@ -56,10 +56,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Guardianes de la Flora"),
-        backgroundColor: const Color.fromARGB(255, 54, 244, 101),
-      ),
       body: Container(
         color: Colors.white, // Fondo negro de toda la pantalla
         padding: EdgeInsets.all(16.0), // Padding para la barra
