@@ -1,16 +1,12 @@
-# loadingpage
+# Proyecto Flutter con Videojuego Guardianes de la Flora
 
-A new Flutter project.
+<div style="text-align: center">
 
-## Getting Started
+| <img src="https://github.com/srzzuares/dmi_Integradora_Flutter/blob/main/Backend/loadingpage/assets/icons/iconE.png" alt="Logo Empresarial" width="500" height="950"/> | <img src="https://github.com/srzzuares/dmi_Integradora_Flutter/blob/main/Backend/loadingpage/assets/icons/1024px.png" alt="Logo de Guardianes de la Flora" width="500" height="950"/> |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                              Logo Empresa                                                                              |                                                                                      Logo Juego                                                                                       |
 
-This project is a starting point for a Flutter application.
+</div>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Logo Empresarial](https://github.com/srzzuares/dmi_Integradora_Flutter/blob/main/Backend/loadingpage/assets/icons/iconE.png)
+![Logo de Guardianes de la Flora](https://github.com/srzzuares/dmi_Integradora_Flutter/blob/main/Backend/loadingpage/assets/icons/1024px.png)
