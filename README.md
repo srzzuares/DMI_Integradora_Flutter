@@ -8,7 +8,7 @@
 
 
 ## Ingeniería en Desarrollo y Gestión de Software
-## "Bellas Artes"
+## "Guardianes de la Flora"
 ## 10A
 ### Proyecto Integrador
 
