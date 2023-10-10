@@ -38,6 +38,10 @@ flutter:
   - assets/icons/icono.jpg
   - assets/icons/512px.png
   - assets/icons/1024px.png
+  - assets/icons/Background2.png
+  - assets/icons/Background2.png
+  - assets/icons/iconE.png
+  - assets/icons/iconE1.png
 
   fonts:
   - family: MiFuente

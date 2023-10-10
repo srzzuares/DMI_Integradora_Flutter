@@ -8,10 +8,10 @@ flutter_native_splash:
   ios: true
   web: false
 
-  image: assets/icons/1024px.png
-  image_dark: assets/icons/1024px.png
-  background_image: "assets/icons/Background2.png"
-  background_image_dark: "assets/icons/Background1.png"
+  image: assets/icons/iconE.png
+  image_dark: assets/icons/iconE1.png
+  background_image: assets/icons/Background2.png
+  background_image_dark: assets/icons/Background1.png
   fullscreen: true
   # color: "#6FFF00"
   # color_dark: "#145E05"
@@ -20,8 +20,8 @@ flutter_native_splash:
   # web_image_mode: center
 
   android_12:
-    image: assets/icons/1024px.png
-    image_dark: assets/icons/1024px.png
-    background_image: "assets/icons/Background2.png"
-    background_image_dark: "assets/icons/Background1.png"
+    image: assets/icons/iconE.png
+    image_dark: assets/icons/iconE1.png
+    background_image: assets/icons/Background2.png
+    background_image_dark: assets/icons/Background1.png
     fullscreen: true
