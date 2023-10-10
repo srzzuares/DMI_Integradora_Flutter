@@ -42,7 +42,17 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      body: PageView(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'Avanzes para la \n proxima semana...',
+              style: TextStyle(fontFamily: 'rdl', fontSize: 30),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
