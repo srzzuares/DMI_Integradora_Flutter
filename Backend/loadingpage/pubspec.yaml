@@ -15,18 +15,34 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.3.3
+  flutter_launcher_icons: ^0.13.1
+flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icons/1024px.png"
+  web:
+    generate: true
+    image_path: "assets/icons/1024px.png"
+  # windows:
+  #   generate: true
+  #   image_path: "assets/icons/2.png"
+  #   icon_size: 48 # min:48, max:256, default: 
+  # flutter pub run flutter_launcher_icons:main
 
   flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
   assets:
-    # - assets/1.png
-    # - assets/2.png
-    # - assets/3.png
-    # - assets/poster.jpg
-    - assets/icono.jpg
+  - assets/icons/icono.jpg
+  - assets/icons/512px.png
+  - assets/icons/1024px.png
+
   fonts:
-    - family: MiFuente
-      fonts:
-        - asset: assets/mifuente.ttf
+  - family: MiFuente
+    fonts:
+    - asset: assets/fonts/MiFuente.ttf
+  - family: rdl
+    fonts:
+    - asset: assets/fonts/Radley-Italic.ttf

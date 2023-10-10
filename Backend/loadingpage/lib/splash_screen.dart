@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/icono.jpg', // Ruta de la imagen del carro
+                    'assets/icons/icono.jpg', // Ruta de la imagen del carro
                     width: 200, // Ancho de la imagen del carro
                     height: 200, // Altura de la imagen del carro
                   ),
@@ -80,10 +80,9 @@ class _SplashScreenState extends State<SplashScreen> {
               Text(
                 _isLoading ? "Cargando..." : "Carga completada",
                 style: TextStyle(
-                  fontSize: 38, // Tamaño de texto más grande
-                  fontFamily: 'MiFuente', // Fuente personalizada
-                  color: Colors.black26
-                ),
+                    fontSize: 38, // Tamaño de texto más grande
+                    fontFamily: 'MiFuente', // Fuente personalizada
+                    color: Colors.black26),
               ),
               SizedBox(height: 20),
               if (_isLoading)
@@ -97,7 +96,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         backgroundColor:
                             Colors.black26, // Fondo blanco de la barra
                         valueColor: AlwaysStoppedAnimation<Color>(
-                            Color.fromARGB(255, 5, 151, 24)), // Cambiar el color de carga a rojo
+                            Color.fromARGB(255, 5, 151,
+                                24)), // Cambiar el color de carga a rojo
                       ),
                     ),
 
