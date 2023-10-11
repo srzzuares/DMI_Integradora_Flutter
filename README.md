@@ -29,7 +29,7 @@
 | Daniela Álvarez Ramírez  |   | TechSolutions | 2023  |   |
 |  Marco Antonio Rosas Gonzalez |   |  TechSolutions | 2023  |   |
 |  Alfredo Solis Sanchez  |   | TechSolutions  |  2023 |   |
-| Crysthian Enrique Suarez Cuevas  |  | TechSolutions  | 2023  |   |
+| Crystian Enrique Suarez Cuevas  |  | TechSolutions  | 2023  |   |
 
 
 &nbsp;
