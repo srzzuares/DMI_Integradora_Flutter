@@ -13,14 +13,35 @@
 ### Proyecto Integrador
 
 
-## Integrantes
+&nbsp;
+### Información del Proyecto
+| Empresa / Organización   |  TechSolutions |
+| ------------ | ------------ |
+| Proyecto   |  Videojuego "Guardianes de la Flora"  |
+| Fecha de preparación  | 2023  |
+| Profesor  |  MTI. Marco Antonio Ramirez |
 
-|  Nombre |   
+
+&nbsp;
+### Responsables
+| Nombre y Apellido  | Cargo  | Departamento u Organización  | Fecha  |Firma   |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Daniela Álvarez Ramírez  |   | TechSolutions | 2023  |   |
+|  Marco Antonio Rosas Gonzalez |   |  TechSolutions | 2023  |   |
+|  Alfredo Solis Sanchez  |   | TechSolutions  |  2023 |   |
+| Crysthian Enrique Suarez Cuevas  |  | TechSolutions  | 2023  |   |
+
+
+&nbsp;
+&nbsp;
+|  Logo de Empresa | Logo de Videojuego  |
+| :------------: | :------------: | 
+|  <img src="https://github.com/srzzuares/dmi_Integradora_Flutter/blob/main/Backend/loadingpage/assets/icons/iconE.png" width="600"/> | <img src="https://github.com/srzzuares/dmi_Integradora_Flutter/blob/main/Backend/loadingpage/assets/icons/512px.png" width="600"/>  | 
+
+&nbsp;
+|  Maquetado en Figma | 
 | :------------: |
-|  Daniela Alvarez Ramirez 
-Marco Antonio Rosas Gonzalez 
-Alfredo Solis Sanchez 
-Crystian Enrique Suarez Cuevas| 
+|  <img src="https://i.postimg.cc/CxsY6xYy/Captura-de-pantalla-2023-10-10-180203.png" width="1500"/> 
 
 
 
