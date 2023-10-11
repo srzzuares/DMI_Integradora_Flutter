@@ -8,6 +8,8 @@
 
 </div>
 
+<div style="text-align: justify">
+
 | Característica |                                                        Información                                                         |
 | :------------: | :------------------------------------------------------------------------------------------------------------------------: |
 |     Nombre     |                                               Aplicacion Flutter Lading Page                                               |
@@ -35,3 +37,5 @@ Para ejecutar esta aplicación, sigue estos pasos:
 5. Ejecuta `flutter run` para iniciar la aplicación en un emulador
 
 6. Si desea realizar el apk para instalar al dispositivo movil Android, ejecutar `flutter build apk` y se localiza en la carpeta donde se guardo y lo traspasa al dispositivo para su uso.
+
+</div>
