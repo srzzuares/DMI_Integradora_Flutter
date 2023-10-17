@@ -3,7 +3,7 @@
 //Grado: 10   Grupo: "A"
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
-import 'package:loadingpage/home.dart';
+import 'package:loadingpage/Pages/home.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
