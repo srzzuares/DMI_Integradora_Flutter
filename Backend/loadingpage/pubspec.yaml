@@ -42,6 +42,10 @@ flutter:
   - assets/icons/Background2.png
   - assets/icons/iconE.png
   - assets/icons/iconE1.png
+  - assets/images/facebook_480.png
+  - assets/images/facebook.png
+  - assets/images/google.png
+  - assets/images/GitHub2000.png
 
   fonts:
   - family: MiFuente
