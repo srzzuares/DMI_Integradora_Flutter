@@ -15,7 +15,7 @@ void main() {
   ));
 
   // Agregar un Future.delayed para esperar un tiempo antes de navegar a la pantalla principal
-  Future.delayed(Duration(seconds: 25), () {
+  Future.delayed(Duration(seconds: 3), () {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),

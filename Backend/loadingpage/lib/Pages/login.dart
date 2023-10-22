@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Color(0xFFfafaf9),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -31,18 +31,16 @@ class LoginPage extends StatelessWidget {
                 height: 250, // Altura de la imagen del carro
               ),
 
-              const SizedBox(height: 15),
+              const SizedBox(height: 2),
 
               // welcome back, you've been missed!
               Text(
                 'Bienvenido ha Guardianes de la Flora',
                 style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 16,
-                ),
+                    color: Color(0xFF292524), fontSize: 16, fontFamily: 'rdl2'),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
               // username textfield
               MyTextField(
@@ -70,13 +68,16 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Text(
                       '¿Olvido la contraseña?',
-                      style: TextStyle(color: Colors.grey[600]),
+                      style: TextStyle(
+                          color: Color(0xFF78716c),
+                          fontFamily: 'rdl',
+                          fontSize: 11),
                     ),
                   ],
                 ),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -103,27 +104,30 @@ class LoginPage extends StatelessWidget {
                     Expanded(
                       child: Divider(
                         thickness: 0.5,
-                        color: Colors.grey[400],
+                        color: Color(0xFFE0E2E5),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
                         'O continua con',
-                        style: TextStyle(color: Colors.grey[700]),
+                        style: TextStyle(
+                            color: Color(0xFF292524),
+                            fontFamily: 'rdl',
+                            fontSize: 12),
                       ),
                     ),
                     Expanded(
                       child: Divider(
                         thickness: 0.5,
-                        color: Colors.grey[400],
+                        color: Color(0xFFE0E2E5),
                       ),
                     ),
                   ],
                 ),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [

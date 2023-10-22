@@ -10,11 +10,11 @@ class LogoLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.white),
+        border: Border.all(color: Color(0xFFE0E2E5)),
         borderRadius: BorderRadius.circular(16),
-        color: Colors.grey[200],
+        color: Color(0xFFf5f5f4),
       ),
       child: Image.asset(
         imagePath,

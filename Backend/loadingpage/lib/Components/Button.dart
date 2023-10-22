@@ -17,15 +17,15 @@ class Button extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           margin: const EdgeInsets.symmetric(horizontal: 25),
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: Color(0xFF292524),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Center(
             child: Text(
               txt,
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+                color: Color(0xFFfafaf9),
+                fontFamily: 'rdl2',
                 fontSize: 16,
               ),
             ),

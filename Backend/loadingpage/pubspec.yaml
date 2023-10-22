@@ -53,4 +53,7 @@ flutter:
     - asset: assets/fonts/MiFuente.ttf
   - family: rdl
     fonts:
-    - asset: assets/fonts/Radley-Italic.ttf
+    - asset: assets/fonts/InknutAntiqua-Medium.ttf
+  - family: rdl2
+    fonts:
+    - asset: assets/fonts/InknutAntiqua-Bold.ttf
