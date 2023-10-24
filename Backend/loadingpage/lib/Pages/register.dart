@@ -3,16 +3,19 @@ import 'package:loadingpage/Components/Button.dart';
 import 'package:loadingpage/Components/LogoLogin.dart';
 import 'package:loadingpage/Components/TextField.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  RegisterPage({super.key});
 
   // text editing controllers
-  final usernameController = TextEditingController();
+  final nameCompletController = TextEditingController();
+  final dateBornController = TextEditingController();
+  final userNameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final passwordConfirmedController = TextEditingController();
 
   // sign user in method
   void signUserIn() {}
-  void signUserRe() {}
 
   @override
   Widget build(BuildContext context) {
@@ -24,20 +27,14 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 10),
-
                 // logo
                 Image.asset(
                   'assets/icons/1024px.png', // Ruta de la imagen del carro
-                  width: 250, // Ancho de la imagen del carro
-                  height: 250, // Altura de la imagen del carro
+                  width: 150, // Ancho de la imagen del carro
+                  height: 150, // Altura de la imagen del carro
                 ),
-
-                const SizedBox(height: 2),
-
-                // welcome back, you've been missed!
                 Text(
-                  'Bienvenido a Guardianes de la Flora',
+                  'Registrate a Guardianes de la Flora',
                   style: TextStyle(
                       color: Color(0xFF292524),
                       fontSize: 16,
@@ -48,8 +45,8 @@ class LoginPage extends StatelessWidget {
 
                 // username textfield
                 MyTextField(
-                  controller: usernameController,
-                  hintText: 'Usuario/Correo',
+                  controller: nameCompletController,
+                  hintText: 'Nombre Completo',
                   obscureText: false,
                 ),
 
@@ -57,61 +54,52 @@ class LoginPage extends StatelessWidget {
 
                 // password textfield
                 MyTextField(
+                  controller: dateBornController,
+                  hintText: 'Fecha de Nacimiento',
+                  obscureText: false,
+                ),
+                const SizedBox(height: 10),
+
+                // username textfield
+                MyTextField(
+                  controller: userNameController,
+                  hintText: 'Nombre de Usuario',
+                  obscureText: false,
+                ),
+
+                const SizedBox(height: 10),
+
+                // password textfield
+                MyTextField(
+                  controller: emailController,
+                  hintText: 'Correo',
+                  obscureText: false,
+                ),
+                const SizedBox(height: 10),
+
+                // username textfield
+                MyTextField(
                   controller: passwordController,
                   hintText: 'Contraseña',
                   obscureText: true,
                 ),
 
                 const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Recordar Contraseña',
-                        style: TextStyle(
-                            color: Color(0xFF78716c),
-                            fontFamily: 'rdl',
-                            fontSize: 11),
-                      ),
-                    ],
-                  ),
+
+                // password textfield
+                MyTextField(
+                  controller: passwordConfirmedController,
+                  hintText: 'Confirma Contraseña',
+                  obscureText: true,
                 ),
+
                 const SizedBox(height: 10),
 
-                // forgot password?
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        '¿Olvido la contraseña?',
-                        style: TextStyle(
-                            color: Color(0xFF78716c),
-                            fontFamily: 'rdl',
-                            fontSize: 11),
-                      ),
-                    ],
+                Center(
+                  child: Button(
+                    onTap: signUserIn,
+                    txt: 'Registrar',
                   ),
-                ),
-
-                const SizedBox(height: 15),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // sign in button
-                    Button(
-                      onTap: signUserIn,
-                      txt: 'Entrar',
-                    ),
-                    Button(
-                      onTap: signUserRe,
-                      txt: 'Registrar',
-                    ),
-                  ],
                 ),
 
                 const SizedBox(height: 10),

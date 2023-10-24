@@ -4,7 +4,7 @@
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
 // import 'package:loadingpage/Pages/home.dart'; // Importa el archivo home.dart
-import 'package:loadingpage/Pages/login.dart';
+import 'package:loadingpage/Pages/register.dart';
 import 'package:loadingpage/Pages/splash_screen.dart'; // Importa el archivo splash_screen.dart
 
 void main() {
@@ -18,7 +18,8 @@ void main() {
   Future.delayed(Duration(seconds: 25), () {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      // home: LoginPage(),
+      home: RegisterPage(),
       theme: ThemeData.dark(),
     ));
   });

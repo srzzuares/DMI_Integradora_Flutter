@@ -31,6 +31,7 @@ class MyTextField extends StatelessWidget {
               ),
               fillColor: Color(0xFFf5f5f4),
               filled: true,
+              contentPadding: EdgeInsets.all(8),
               hintText: hintText,
               hintStyle: TextStyle(
                   color: Color(0xFF292524), fontFamily: 'rdl', fontSize: 12)),
