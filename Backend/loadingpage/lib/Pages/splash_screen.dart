@@ -4,6 +4,7 @@
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
 import 'package:loadingpage/Pages/home.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
@@ -12,6 +13,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    initialization();
+    _simulateLoading();
+  }
+
+  void initialization() async {
+    await Future.delayed(const Duration(seconds: 3));
+    FlutterNativeSplash.remove();
+  }
+
   double _progress = 0.0;
   bool _isLoading = true;
 
@@ -48,12 +61,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
-  void initState() {
-    super.initState();
-    _simulateLoading();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -67,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/icons/icono.jpg', // Ruta de la imagen del carro
+                    'assets/icons/1024px.png', // Ruta de la imagen del carro
                     width: 200, // Ancho de la imagen del carro
                     height: 200, // Altura de la imagen del carro
                   ),
