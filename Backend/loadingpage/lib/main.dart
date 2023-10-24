@@ -3,8 +3,8 @@
 //Grado: 10   Grupo: "A"
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
+import 'package:loadingpage/Pages/condition.dart';
 // import 'package:loadingpage/Pages/home.dart'; // Importa el archivo home.dart
-import 'package:loadingpage/Pages/register.dart';
 import 'package:loadingpage/Pages/splash_screen.dart'; // Importa el archivo splash_screen.dart
 
 void main() {
@@ -19,7 +19,7 @@ void main() {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: LoginPage(),
-      home: RegisterPage(),
+      home: ConditionPage(),
       theme: ThemeData.dark(),
     ));
   });
