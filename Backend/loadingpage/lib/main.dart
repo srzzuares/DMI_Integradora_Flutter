@@ -3,7 +3,8 @@
 //Grado: 10   Grupo: "A"
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
-import 'package:loadingpage/Pages/codeVerification.dart';
+// import 'package:loadingpage/Pages/codeVerification.dart';
+import 'package:loadingpage/Pages/history.dart';
 // import 'package:loadingpage/Pages/recovery.dart';
 // import 'package:loadingpage/Pages/condition.dart';
 // import 'package:loadingpage/Pages/register.dart';
@@ -24,7 +25,7 @@ void main() {
       // home: LoginPage(),
       // home: RegisterPage(),
       // home: RecoveryPage(),
-      home: CodeVerifyPage(),
+      home: HistoryPage(),
       theme: ThemeData.dark(),
     ));
   });
