@@ -8,25 +8,29 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Center(
-        child: Container(
-          width: 120,
-          height: 60,
-          padding: const EdgeInsets.all(5),
-          margin: const EdgeInsets.symmetric(horizontal: 25),
-          decoration: BoxDecoration(
-            color: Color(0xFF292524),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Center(
-            child: Text(
-              txt,
-              style: TextStyle(
-                color: Color(0xFFfafaf9),
-                fontFamily: 'rdl2',
-                fontSize: 16,
+    return Container(
+      width: 190,
+      height: 45,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Center(
+          child: Container(
+            width: 120,
+            height: 60,
+            padding: const EdgeInsets.all(5),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(
+              color: Color(0xFF292524),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Center(
+              child: Text(
+                txt,
+                style: TextStyle(
+                  color: Color(0xFFfafaf9),
+                  fontFamily: 'rdl2',
+                  fontSize: 14,
+                ),
               ),
             ),
           ),

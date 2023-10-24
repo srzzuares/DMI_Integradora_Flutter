@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white, // Fondo negro de toda la pantalla
+        color: Color(0xFFfafaf9), // Fondo negro de toda la pantalla
         padding: EdgeInsets.all(16.0), // Padding para la barra
         child: Center(
           child: Column(
@@ -75,17 +75,17 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Image.asset(
                     'assets/icons/1024px.png', // Ruta de la imagen del carro
-                    width: 200, // Ancho de la imagen del carro
-                    height: 200, // Altura de la imagen del carro
+                    width: 250, // Ancho de la imagen del carro
+                    height: 250, // Altura de la imagen del carro
                   ),
                 ],
               ),
               Text(
                 _isLoading ? "Cargando..." : "Carga completada",
                 style: TextStyle(
-                    fontSize: 38, // Tamaño de texto más grande
-                    fontFamily: 'MiFuente', // Fuente personalizada
-                    color: Colors.black26),
+                    fontSize: 28, // Tamaño de texto más grande
+                    fontFamily: 'rdl2', // Fuente personalizada
+                    color: Color(0xFF292524)),
               ),
               SizedBox(height: 20),
               if (_isLoading)
@@ -98,9 +98,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         value: _progress,
                         backgroundColor:
                             Colors.black26, // Fondo blanco de la barra
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                            Color.fromARGB(255, 5, 151,
-                                24)), // Cambiar el color de carga a rojo
+                        valueColor: AlwaysStoppedAnimation<Color>(Color(
+                            0xFF059718)), // Cambiar el color de carga a rojo
                       ),
                     ),
 
@@ -110,8 +109,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     Text(
                       "${(_progress * 100).toInt()}%", // Porcentaje
                       style: TextStyle(
-                        color: Colors.black26, // Texto en blanco
-                        fontSize: 32, // Tamaño de porcentaje más grande
+                        fontFamily: 'rdl2',
+                        color: Color(0xFF292524), // Texto en blanco
+                        fontSize: 28, // Tamaño de porcentaje más grande
                       ),
                     ),
                     SizedBox(

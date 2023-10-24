@@ -19,135 +19,155 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Color(0xFFfafaf9),
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 10),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 10),
 
-              // logo
-              Image.asset(
-                'assets/icons/1024px.png', // Ruta de la imagen del carro
-                width: 250, // Ancho de la imagen del carro
-                height: 250, // Altura de la imagen del carro
-              ),
-
-              const SizedBox(height: 2),
-
-              // welcome back, you've been missed!
-              Text(
-                'Bienvenido ha Guardianes de la Flora',
-                style: TextStyle(
-                    color: Color(0xFF292524), fontSize: 16, fontFamily: 'rdl2'),
-              ),
-
-              const SizedBox(height: 10),
-
-              // username textfield
-              MyTextField(
-                controller: usernameController,
-                hintText: 'Usuario/Correo',
-                obscureText: false,
-              ),
-
-              const SizedBox(height: 10),
-
-              // password textfield
-              MyTextField(
-                controller: passwordController,
-                hintText: 'Contraseña',
-                obscureText: true,
-              ),
-
-              const SizedBox(height: 10),
-
-              // forgot password?
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      '¿Olvido la contraseña?',
-                      style: TextStyle(
-                          color: Color(0xFF78716c),
-                          fontFamily: 'rdl',
-                          fontSize: 11),
-                    ),
-                  ],
+                // logo
+                Image.asset(
+                  'assets/icons/1024px.png', // Ruta de la imagen del carro
+                  width: 250, // Ancho de la imagen del carro
+                  height: 250, // Altura de la imagen del carro
                 ),
-              ),
 
-              const SizedBox(height: 15),
+                const SizedBox(height: 2),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // sign in button
-                  Button(
-                    onTap: signUserIn,
-                    txt: 'Entrar',
-                  ),
-                  Button(
-                    onTap: signUserIn,
-                    txt: 'Registrar',
-                  ),
-                ],
-              ),
+                // welcome back, you've been missed!
+                Text(
+                  'Bienvenido ha Guardianes de la Flora',
+                  style: TextStyle(
+                      color: Color(0xFF292524),
+                      fontSize: 16,
+                      fontFamily: 'rdl2'),
+                ),
 
-              const SizedBox(height: 20),
+                const SizedBox(height: 10),
 
-              // or continue with
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Color(0xFFE0E2E5),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Text(
-                        'O continua con',
+                // username textfield
+                MyTextField(
+                  controller: usernameController,
+                  hintText: 'Usuario/Correo',
+                  obscureText: false,
+                ),
+
+                const SizedBox(height: 10),
+
+                // password textfield
+                MyTextField(
+                  controller: passwordController,
+                  hintText: 'Contraseña',
+                  obscureText: true,
+                ),
+
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Recordar Contraseña',
                         style: TextStyle(
-                            color: Color(0xFF292524),
+                            color: Color(0xFF78716c),
                             fontFamily: 'rdl',
-                            fontSize: 12),
+                            fontSize: 11),
                       ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+
+                // forgot password?
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        '¿Olvido la contraseña?',
+                        style: TextStyle(
+                            color: Color(0xFF78716c),
+                            fontFamily: 'rdl',
+                            fontSize: 11),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // sign in button
+                    Button(
+                      onTap: signUserIn,
+                      txt: 'Entrar',
                     ),
-                    Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Color(0xFFE0E2E5),
-                      ),
+                    Button(
+                      onTap: signUserIn,
+                      txt: 'Registrar',
                     ),
                   ],
                 ),
-              ),
 
-              const SizedBox(height: 15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  // google button
-                  LogoLogin(imagePath: 'assets/images/google.png'),
+                const SizedBox(height: 10),
 
-                  SizedBox(width: 25),
+                // or continue with
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Color(0xFF78716c),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text(
+                          'O continua con',
+                          style: TextStyle(
+                              color: Color(0xFF292524),
+                              fontFamily: 'rdl',
+                              fontSize: 12),
+                        ),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Color(0xFF78716c),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
 
-                  // facebook button
-                  LogoLogin(imagePath: 'assets/images/facebook.png'),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    // google button
+                    LogoLogin(imagePath: 'assets/images/google.png'),
 
-                  SizedBox(width: 25),
+                    SizedBox(width: 25),
 
-                  // Github button
-                  LogoLogin(imagePath: 'assets/images/GitHub2000.png')
-                ],
-              ),
+                    // facebook button
+                    LogoLogin(imagePath: 'assets/images/facebook.png'),
 
-              const SizedBox(height: 30),
-            ],
+                    SizedBox(width: 25),
+
+                    // Github button
+                    LogoLogin(imagePath: 'assets/images/GitHub2000.png')
+                  ],
+                ),
+
+                const SizedBox(height: 30),
+              ],
+            ),
           ),
         ),
       ),
