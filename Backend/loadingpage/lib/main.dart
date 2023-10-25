@@ -3,7 +3,7 @@
 //Grado: 10   Grupo: "A"
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart';
-import 'package:loadingpage/Components/SDHome.dart';
+import 'package:loadingpage/Components/SDValoracion.dart';
 import 'package:loadingpage/Pages/splash_screen.dart';
 
 void main() {
@@ -17,7 +17,7 @@ void main() {
   Future.delayed(Duration(seconds: 25), () {
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SDH_Home(),
+      home: SDV_Valoracion(),
       theme: ThemeData.dark(),
     ));
   });
