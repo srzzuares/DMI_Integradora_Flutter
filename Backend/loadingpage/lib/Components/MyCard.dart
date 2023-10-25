@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class MyCard extends StatelessWidget {
   final String tittle;
   final String txt;
+  final double txtFZ;
   final double wd;
   final double hg;
 
@@ -11,7 +12,8 @@ class MyCard extends StatelessWidget {
       required this.txt,
       required this.wd,
       required this.hg,
-      required this.tittle});
+      required this.tittle,
+      required this.txtFZ});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class MyCard extends StatelessWidget {
               child: Text(txt,
                   style: TextStyle(
                       color: Color(0xFF292524),
-                      fontSize: 10,
+                      fontSize: txtFZ,
                       fontFamily: 'rdl2')),
             )
           ],

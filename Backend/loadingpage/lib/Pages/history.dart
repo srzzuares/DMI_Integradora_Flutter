@@ -9,9 +9,6 @@ class HistoryPage extends StatefulWidget {
 }
 
 class _HistoryPageState extends State<HistoryPage> {
-  final emailController = TextEditingController();
-  bool isChecked = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +45,7 @@ class _HistoryPageState extends State<HistoryPage> {
                 MyCard(
                   tittle: 'Historia',
                   txt: history,
+                  txtFZ: 10,
                   hg: 1300,
                   wd: 500,
                 ),
@@ -55,6 +53,7 @@ class _HistoryPageState extends State<HistoryPage> {
                 MyCard(
                   tittle: 'Descripción',
                   txt: descripction,
+                  txtFZ: 10,
                   hg: 450,
                   wd: 500,
                 ),
