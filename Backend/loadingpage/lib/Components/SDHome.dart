@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:loadingpage/Components/ScreenMenuAbout.dart';
-import 'package:loadingpage/Pages/about.dart';
+import 'package:loadingpage/Components/SMHome.dart';
+import 'package:loadingpage/Pages/home.dart';
 
-class SDA_Home extends StatelessWidget {
-  const SDA_Home({super.key});
+class SDH_Home extends StatelessWidget {
+  const SDH_Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class SDA_Home extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMA_M(),
-        mainScreen: AboutPage());
+        menuScreen: SMHo_M(),
+        mainScreen: Home());
   }
 }

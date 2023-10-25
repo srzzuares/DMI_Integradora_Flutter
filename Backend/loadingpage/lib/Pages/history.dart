@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:loadingpage/Components/MyCard.dart';
 
 // ignore: must_be_immutable
@@ -20,13 +21,25 @@ class _HistoryPageState extends State<HistoryPage> {
               Icons.person_4_rounded,
               size: 40,
             ),
-            onPressed: () {},
+            onPressed: () {
+              if (ZoomDrawer.of(context)!.isOpen()) {
+                ZoomDrawer.of(context)!.close();
+              } else {
+                ZoomDrawer.of(context)!.open();
+              }
+            },
           ),
         ],
         leading: IconButton(
           color: Color(0xFF292524),
           icon: const Icon(Icons.menu),
-          onPressed: () {},
+          onPressed: () {
+            if (ZoomDrawer.of(context)!.isOpen()) {
+              ZoomDrawer.of(context)!.close();
+            } else {
+              ZoomDrawer.of(context)!.open();
+            }
+          },
         ),
         centerTitle: true,
         title: Text('Guardianes de la Flora'),

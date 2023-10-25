@@ -3,6 +3,7 @@
 //Grado: 10   Grupo: "A"
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class Home extends StatefulWidget {
   const Home(
@@ -27,28 +28,50 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     // Crear una página Scaffold que contiene la estructura principal de la aplicación
     return new Scaffold(
-      appBar: new AppBar(
-        // Barra de navegación superior (AppBar) con un título y un botón de búsqueda
-        title: new Text("Guardianes de la Flora"), // Título de la aplicación
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(
-              Icons.search,
-              color: Colors.white,
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            color: Color(0xFF292524),
+            icon: const Icon(
+              Icons.person_4_rounded,
+              size: 40,
             ),
             onPressed: () {
-              // Acción a ejecutar cuando se presiona el botón de búsqueda
+              if (ZoomDrawer.of(context)!.isOpen()) {
+                ZoomDrawer.of(context)!.close();
+              } else {
+                ZoomDrawer.of(context)!.open();
+              }
             },
           ),
         ],
+        leading: IconButton(
+          color: Color(0xFF292524),
+          icon: const Icon(Icons.menu),
+          onPressed: () {
+            if (ZoomDrawer.of(context)!.isOpen()) {
+              ZoomDrawer.of(context)!.close();
+            } else {
+              ZoomDrawer.of(context)!.open();
+            }
+          },
+        ),
+        centerTitle: true,
+        title: Text('Guardianes de la Flora'),
+        titleTextStyle: TextStyle(
+            color: Color(0xFF292524), fontFamily: 'rdl2', fontSize: 16),
+        backgroundColor: Color(0xFFfafaf9),
+        elevation: 1,
       ),
+      backgroundColor: Color(0xFFfafaf9),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
               'Avanzes para la \n proxima semana...',
-              style: TextStyle(fontFamily: 'rdl', fontSize: 30),
+              style: TextStyle(
+                  fontFamily: 'rdl', fontSize: 30, color: Color(0xFF292524)),
             )
           ],
         ),
