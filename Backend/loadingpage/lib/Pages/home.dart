@@ -6,27 +6,14 @@ import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para co
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class Home extends StatefulWidget {
-  const Home(
-      {super.key}); // Constructor de Home con un parámetro opcional llamado key.
+  const Home({super.key});
   @override
-  State<Home> createState() =>
-      _HomeState(); // Define una clase que extiende StatefulWidget y proporciona un método para crear su estado interno.
+  State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  // Define una clase que extiende State y representa el estado interno de Home.
-
-  // Estilo de fuente personalizado
-  final TextStyle customTextStyle = TextStyle(
-    fontFamily: 'MiFuente', // Nombre de la fuente definido en pubspec.yaml
-    fontSize: 16.0, // Tamaño de fuente deseado
-    fontWeight: FontWeight
-        .bold, // Puedes ajustar el peso de la fuente según tus preferencias
-  );
-
   @override
   Widget build(BuildContext context) {
-    // Crear una página Scaffold que contiene la estructura principal de la aplicación
     return new Scaffold(
       appBar: AppBar(
         actions: [

@@ -14,25 +14,22 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(
-        backgroundColor: Color(0xFFfafaf9),
-        child: Text('data'),
-      ),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         actions: [
-          Builder(builder: (context) {
-            return IconButton(
-              color: Color(0xFF292524),
-              icon: const Icon(
-                Icons.person_4_rounded,
-                size: 40,
-              ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-            );
-          })
+          IconButton(
+            color: Color(0xFF292524),
+            icon: const Icon(
+              Icons.person_4_rounded,
+              size: 40,
+            ),
+            onPressed: () {
+              if (ZoomDrawer.of(context)!.isOpen()) {
+                ZoomDrawer.of(context)!.close();
+              } else {
+                ZoomDrawer.of(context)!.open();
+              }
+            },
+          ),
         ],
         leading: IconButton(
           color: Color(0xFF292524),
