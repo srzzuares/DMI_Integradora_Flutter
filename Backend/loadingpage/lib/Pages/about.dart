@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:loadingpage/Components/MyCard.dart';
 import 'package:loadingpage/Components/MyCardGreen.dart';
 
@@ -33,15 +34,17 @@ class _AboutPageState extends State<AboutPage> {
             );
           })
         ],
-        leading: Builder(builder: (context) {
-          return IconButton(
-            color: Color(0xFF292524),
-            icon: const Icon(Icons.menu),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          );
-        }),
+        leading: IconButton(
+          color: Color(0xFF292524),
+          icon: const Icon(Icons.menu),
+          onPressed: () {
+            if (ZoomDrawer.of(context)!.isOpen()) {
+              ZoomDrawer.of(context)!.close();
+            } else {
+              ZoomDrawer.of(context)!.open();
+            }
+          },
+        ),
         centerTitle: true,
         title: Text('Guardianes de la Flora'),
         titleTextStyle: TextStyle(
