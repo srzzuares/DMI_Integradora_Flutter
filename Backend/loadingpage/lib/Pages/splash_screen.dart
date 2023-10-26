@@ -51,11 +51,11 @@ class _SplashScreenState extends State<SplashScreen> {
         setState(() {
           _isLoading = false;
         });
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (BuildContext context) => Home(),
-          ),
-        );
+        // Navigator.of(context).pushReplacement(
+        //   MaterialPageRoute(
+        //     builder: (BuildContext context) => HomePage(),
+        //   ),
+        // );
       }
     });
   }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:loadingpage/Components/Button.dart';
 import 'package:loadingpage/Components/LogoLogin.dart';
+import 'package:loadingpage/Components/SDHome.dart';
 import 'package:loadingpage/Components/TextField.dart';
+import 'package:loadingpage/Pages/recovery.dart';
+import 'package:loadingpage/Pages/register.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -11,7 +14,8 @@ class LoginPage extends StatelessWidget {
   final passwordController = TextEditingController();
 
   // sign user in method
-  void signUserIn() {}
+  // void signUserIn() {}
+
   void signUserRe() {}
 
   @override
@@ -26,16 +30,14 @@ class LoginPage extends StatelessWidget {
               children: [
                 const SizedBox(height: 10),
 
-                // logo
                 Image.asset(
-                  'assets/icons/1024px.png', // Ruta de la imagen del carro
-                  width: 250, // Ancho de la imagen del carro
-                  height: 250, // Altura de la imagen del carro
+                  'assets/icons/1024px.png',
+                  width: 250,
+                  height: 250,
                 ),
 
                 const SizedBox(height: 2),
 
-                // welcome back, you've been missed!
                 Text(
                   'Bienvenido a Guardianes de la Flora',
                   style: TextStyle(
@@ -86,12 +88,19 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        '¿Olvido la contraseña?',
-                        style: TextStyle(
-                            color: Color(0xFF78716c),
-                            fontFamily: 'rdl',
-                            fontSize: 11),
+                      TextButton(
+                        onPressed: () => Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => RecoveryPage(),
+                          ),
+                        ),
+                        child: Text(
+                          '¿Olvido la contraseña?',
+                          style: TextStyle(
+                              color: Color(0xFF78716c),
+                              fontFamily: 'rdl',
+                              fontSize: 11),
+                        ),
                       ),
                     ],
                   ),
@@ -104,11 +113,23 @@ class LoginPage extends StatelessWidget {
                   children: [
                     // sign in button
                     Button(
-                      onTap: signUserIn,
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => SDH_Home(),
+                          ),
+                        );
+                      },
                       txt: 'Entrar',
                     ),
                     Button(
-                      onTap: signUserRe,
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => RegisterPage(),
+                          ),
+                        );
+                      },
                       txt: 'Registrar',
                     ),
                   ],
@@ -150,19 +171,46 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     // google button
-                    LogoLogin(imagePath: 'assets/images/google.png'),
+                    LogoLogin(
+                      imagePath: 'assets/images/google.png',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => SDH_Home(),
+                          ),
+                        );
+                      },
+                    ),
 
                     SizedBox(width: 25),
 
                     // facebook button
-                    LogoLogin(imagePath: 'assets/images/facebook.png'),
+                    LogoLogin(
+                      imagePath: 'assets/images/facebook.png',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => SDH_Home(),
+                          ),
+                        );
+                      },
+                    ),
 
                     SizedBox(width: 25),
 
                     // Github button
-                    LogoLogin(imagePath: 'assets/images/GitHub2000.png')
+                    LogoLogin(
+                      imagePath: 'assets/images/GitHub2000.png',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => SDH_Home(),
+                          ),
+                        );
+                      },
+                    )
                   ],
                 ),
 

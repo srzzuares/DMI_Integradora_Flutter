@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:loadingpage/Components/Button.dart';
 import 'package:loadingpage/Components/TextField.dart';
+import 'package:loadingpage/Pages/codeVerification.dart';
+import 'package:loadingpage/Pages/login.dart';
 
 // ignore: must_be_immutable
 class RecoveryPage extends StatefulWidget {
@@ -54,7 +56,14 @@ class _RecoveryPageState extends State<RecoveryPage> {
                         Container(
                           child: Center(
                             child: Button(
-                              onTap: signUserIn,
+                              onTap: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CodeVerifyPage(),
+                                  ),
+                                );
+                              },
                               txt: 'Enviar',
                             ),
                           ),
@@ -66,7 +75,11 @@ class _RecoveryPageState extends State<RecoveryPage> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  setState(() {});
+                                  Navigator.of(context)
+                                      .pushReplacement(MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        LoginPage(),
+                                  ));
                                 },
                                 child: Text(
                                   'Iniciar Sesión',

@@ -15,6 +15,6 @@ class SDH_Home extends StatelessWidget {
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
         menuScreen: SMHo_M(),
-        mainScreen: Home());
+        mainScreen: HomePage());
   }
 }

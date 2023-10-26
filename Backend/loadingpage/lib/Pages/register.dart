@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:loadingpage/Components/Button.dart';
 import 'package:loadingpage/Components/LogoLogin.dart';
 import 'package:loadingpage/Components/TextField.dart';
+import 'package:loadingpage/Pages/condition.dart';
 
 class RegisterPage extends StatelessWidget {
   RegisterPage({super.key});
@@ -27,6 +28,22 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  padding: EdgeInsets.only(left: 20),
+                  child: GestureDetector(
+                    onTap: () => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => ConditionPage(),
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.arrow_back,
+                      size: 40,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                ),
                 // logo
                 Image.asset(
                   'assets/icons/1024px.png', // Ruta de la imagen del carro
@@ -97,7 +114,13 @@ class RegisterPage extends StatelessWidget {
 
                 Center(
                   child: Button(
-                    onTap: signUserIn,
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ConditionPage(),
+                        ),
+                      );
+                    },
                     txt: 'Registrar',
                   ),
                 ),
@@ -138,19 +161,46 @@ class RegisterPage extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     // google button
-                    LogoLogin(imagePath: 'assets/images/google.png'),
+                    LogoLogin(
+                      imagePath: 'assets/images/google.png',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => ConditionPage(),
+                          ),
+                        );
+                      },
+                    ),
 
                     SizedBox(width: 25),
 
                     // facebook button
-                    LogoLogin(imagePath: 'assets/images/facebook.png'),
+                    LogoLogin(
+                      imagePath: 'assets/images/facebook.png',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => ConditionPage(),
+                          ),
+                        );
+                      },
+                    ),
 
                     SizedBox(width: 25),
 
                     // Github button
-                    LogoLogin(imagePath: 'assets/images/GitHub2000.png')
+                    LogoLogin(
+                      imagePath: 'assets/images/GitHub2000.png',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => ConditionPage(),
+                          ),
+                        );
+                      },
+                    )
                   ],
                 ),
 

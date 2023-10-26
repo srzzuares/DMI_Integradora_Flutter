@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loadingpage/Components/Button.dart';
 import 'package:loadingpage/Components/TextField.dart';
+import 'package:loadingpage/Pages/login.dart';
 
 // ignore: must_be_immutable
 class CodeVerifyPage extends StatefulWidget {
@@ -53,7 +54,13 @@ class _CodeVerifyPageState extends State<CodeVerifyPage> {
                         Container(
                           child: Center(
                             child: Button(
-                              onTap: confirmatedCount,
+                              onTap: () {
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      LoginPage(),
+                                ));
+                              },
                               txt: 'Entrar',
                             ),
                           ),
@@ -65,7 +72,11 @@ class _CodeVerifyPageState extends State<CodeVerifyPage> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  setState(() {});
+                                  Navigator.of(context)
+                                      .pushReplacement(MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        LoginPage(),
+                                  ));
                                 },
                                 child: Text(
                                   'Iniciar Sesión',

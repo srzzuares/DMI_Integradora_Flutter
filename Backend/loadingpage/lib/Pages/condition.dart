@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loadingpage/Components/Button.dart';
+import 'package:loadingpage/Components/SDHome.dart';
 
 // ignore: must_be_immutable
 class ConditionPage extends StatefulWidget {
@@ -111,7 +112,15 @@ class _ConditionPageState extends State<ConditionPage> {
                   const SizedBox(height: 10),
                   Center(
                     child: Button(
-                      onTap: signUserIn,
+                      onTap: () {
+                        if (isChecked) {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => SDH_Home(),
+                            ),
+                          );
+                        }
+                      },
                       txt: 'Comenzar',
                     ),
                   ),

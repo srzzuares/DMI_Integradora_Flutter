@@ -3,8 +3,8 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:loadingpage/Components/SMAbout.dart';
 import 'package:loadingpage/Pages/about.dart';
 
-class SDA_Home extends StatelessWidget {
-  const SDA_Home({super.key});
+class SDA_About extends StatelessWidget {
+  const SDA_About({super.key});
 
   @override
   Widget build(BuildContext context) {
