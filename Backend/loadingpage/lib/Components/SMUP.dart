@@ -38,21 +38,30 @@ class SMU_UserProfile extends StatelessWidget {
                 //     borderRadius: BorderRadius.circular(10),
                 //     color: Colors.amber),
                 alignment: AlignmentDirectional.center,
-                child: Column(
-                  children: [
-                    Icon(
-                      Icons.person_4_rounded,
-                      size: 100,
-                      color: Color(0xFFfafaf9),
-                    ),
-                    Text(
-                      'Username',
-                      style: TextStyle(
-                          color: Color(0xFFfafaf9),
-                          fontFamily: 'rdl2',
-                          fontSize: 16),
-                    )
-                  ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => SDUP_UserProfile(),
+                      ),
+                    );
+                  },
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.person_4_rounded,
+                        size: 100,
+                        color: Color(0xFFfafaf9),
+                      ),
+                      Text(
+                        'Username',
+                        style: TextStyle(
+                            color: Color(0xFFfafaf9),
+                            fontFamily: 'rdl2',
+                            fontSize: 16),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
