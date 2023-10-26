@@ -56,7 +56,7 @@ class _ScoreBoardPageState extends State<ScoreBoardPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Avanzes para la \n proxima semana...\nScore',
+              'Avances para la \n proxima semana...\nScore',
               style: TextStyle(
                   fontFamily: 'rdl', fontSize: 30, color: Color(0xFF292524)),
             )

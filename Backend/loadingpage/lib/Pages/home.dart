@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Avanzes para la \n proxima semana...',
+              'Avances para la \n proxima semana...',
               style: TextStyle(
                   fontFamily: 'rdl', fontSize: 30, color: Color(0xFF292524)),
             )
