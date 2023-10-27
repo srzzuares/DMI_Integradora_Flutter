@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:loadingpage/Components/SMAbout.dart';
+import 'package:loadingpage/Components/SMHome.dart';
 import 'package:loadingpage/Pages/about.dart';
 
 class SDA_About extends StatelessWidget {
@@ -14,7 +14,7 @@ class SDA_About extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMA_M(),
+        menuScreen: SMHo_M(),
         mainScreen: AboutPage());
   }
 }

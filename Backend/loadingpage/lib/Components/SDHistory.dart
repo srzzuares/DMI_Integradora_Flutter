@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:loadingpage/Components/SMHistory.dart';
+import 'package:loadingpage/Components/SMHome.dart';
 import 'package:loadingpage/Pages/history.dart';
 
 class SDH_History extends StatelessWidget {
@@ -14,7 +14,7 @@ class SDH_History extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMH_M(),
+        menuScreen: SMHo_M(),
         mainScreen: HistoryPage());
   }
 }

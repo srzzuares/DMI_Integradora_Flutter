@@ -5,7 +5,6 @@
 import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:loadingpage/Components/MyCard.dart';
-import 'package:loadingpage/Components/MyCardGreen.dart';
 import 'package:loadingpage/Components/MyCardScore.dart';
 
 class ScoreBoardPage extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:loadingpage/Components/SMValoracion.dart';
+import 'package:loadingpage/Components/SMHome.dart';
 import 'package:loadingpage/Pages/valoracion.dart';
 
 class SDV_Valoracion extends StatelessWidget {
@@ -14,7 +14,7 @@ class SDV_Valoracion extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMV_Valoracion(),
+        menuScreen: SMHo_M(),
         mainScreen: ValoracionPage());
   }
 }

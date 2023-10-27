@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:loadingpage/Components/SMUP.dart';
+import 'package:loadingpage/Components/SMHome.dart';
 import 'package:loadingpage/Pages/userProfile.dart';
 
 class SDUP_UserProfile extends StatelessWidget {
@@ -14,7 +14,7 @@ class SDUP_UserProfile extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMU_UserProfile(),
+        menuScreen: SMHo_M(),
         mainScreen: userProfilePage());
   }
 }
