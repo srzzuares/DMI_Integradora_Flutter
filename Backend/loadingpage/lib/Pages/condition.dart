@@ -63,11 +63,12 @@ class _ConditionPageState extends State<ConditionPage> {
                   const SizedBox(height: 10),
                   SingleChildScrollView(
                     child: Container(
+                      padding: EdgeInsets.only(left: 20, right: 20),
                       child: Text(
-                        'Aqui seran la reglas',
+                        TxtCond,
                         style: TextStyle(
                             fontFamily: 'rdl',
-                            fontSize: 14,
+                            fontSize: 11,
                             color: Color(0xFF292524)),
                       ),
                     ),
@@ -133,4 +134,7 @@ class _ConditionPageState extends State<ConditionPage> {
       ),
     );
   }
+
+  String TxtCond =
+      "Términos y Condiciones del Juego \"Guardianes de la Flora\" \n\nEstos Términos y Condiciones (\"T&C\") rigen el uso de \"Guardianes de la Flora\" (el \"Juego\"), desarrollado y proporcionado por TechSolutions (\"Nosotros\", \"Nuestro\" o \"Nos\"). Al acceder y utilizar el Juego, aceptas cumplir con estos T&C en su totalidad. Si no estás de acuerdo con alguno de los términos, no debes utilizar el Juego. \n\n1. Licencia de Uso \n\n1.1. Condiciones de Uso. Te otorgamos una licencia limitada, no exclusiva y no transferible para acceder y utilizar el Juego de acuerdo con estos T&C.\n\n1.2. Restricciones. No puedes:   a. Copiar, modificar, distribuir, vender o sublicenciar el Juego.   b. Utilizar el Juego de manera ilegal o para cualquier propósito no autorizado   c. Intentar acceder o modificar partes del Juego a las que no tienes acceso.\n\n2. Derechos de Propiedad Intelectual\n\n2.1. Propiedad. Todos los derechos de propiedad intelectual relacionados con el Juego, incluyendo, pero no limitado a, derechos de autor, marcas registradas y patentes, son propiedad de TechSolutions o de sus licenciantes.\n\n2.2. Contenido del Usuario. Cualquier contenido generado por el usuario (\"Contenido del Usuario\") que se cree o comparta a través del Juego sigue siendo propiedad de quien lo creó, pero al cargarlo en el Juego, otorgas a TechSolutions una licencia no exclusiva para utilizar, mostrar y distribuir ese Contenido del Usuario en relación con el Juego.\n\n3. Privacidad\n\n3.1. Privacidad. Al utilizar el Juego, aceptas nuestra Política de Privacidad, que describe cómo recopilamos, utilizamos y compartimos tus datos personales.\n\n4. Cambios en los T&C\n\nNos reservamos el derecho de modificar estos T&C en cualquier momento. Las modificaciones serán efectivas cuando se publiquen en el Juego. Te recomendamos revisar periódicamente estos T&C.\n\n5. Terminación\n\nPodemos, a nuestra discreción, terminar tu acceso al Juego en cualquier momento y por cualquier razón, incluyendo el incumplimiento de estos T&C.\n\n6. Ley Aplicable\n\nEstos T&C se rigen por las leyes de México y cualquier disputa que surja en relación con estos T&C estará sujeta a la jurisdicción exclusiva de los tribunales de Xicotepec.\n\n7. Contacto\n\nSi tienes alguna pregunta o inquietud sobre estos T&C, contáctanos a través de techsolutions@utxicotpec.com\n";
 }

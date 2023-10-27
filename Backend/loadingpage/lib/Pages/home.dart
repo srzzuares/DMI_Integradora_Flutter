@@ -4,6 +4,7 @@
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:loadingpage/Components/MyCard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,16 +52,30 @@ class _HomePageState extends State<HomePage> {
         elevation: 1,
       ),
       backgroundColor: Color(0xFFfafaf9),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Avances para la \n proxima semana...',
-              style: TextStyle(
-                  fontFamily: 'rdl', fontSize: 30, color: Color(0xFF292524)),
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              const Text(
+                'LeaderBoard',
+                style: TextStyle(
+                    fontFamily: 'rdl2', fontSize: 20, color: Color(0xFF292524)),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Image.asset('assets/images/trofeo.png',
+                    width: 200, height: 200),
+              ),
+              MyCard(
+                wd: 400,
+                hg: 400,
+                tittle: 'Tabla',
+                txt: '-----',
+                txtFZ: 13,
+              ),
+            ],
+          ),
         ),
       ),
     );

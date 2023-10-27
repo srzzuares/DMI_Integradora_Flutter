@@ -43,6 +43,7 @@ flutter:
   - assets/images/facebook.png
   - assets/images/google.png
   - assets/images/GitHub2000.png
+  - assets/images/trofeo.png
 
   fonts:
   - family: MiFuente
