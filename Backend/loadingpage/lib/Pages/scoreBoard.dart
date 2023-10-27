@@ -4,6 +4,9 @@
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:loadingpage/Components/MyCard.dart';
+import 'package:loadingpage/Components/MyCardGreen.dart';
+import 'package:loadingpage/Components/MyCardScore.dart';
 
 class ScoreBoardPage extends StatefulWidget {
   const ScoreBoardPage({super.key});
@@ -53,12 +56,29 @@ class _ScoreBoardPageState extends State<ScoreBoardPage> {
       backgroundColor: Color(0xFFfafaf9),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             const Text(
-              'Avances para la \n proxima semana...\nScore',
+              'ScoreBoard',
               style: TextStyle(
-                  fontFamily: 'rdl', fontSize: 30, color: Color(0xFF292524)),
+                  fontFamily: 'rdl2', fontSize: 20, color: Color(0xFF292524)),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: MyCardScore(
+                wd: 350,
+                hg: 200,
+                tittle: 'Mejores Resultadoos',
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+              child: MyCard(
+                  txt: '---------',
+                  wd: 350,
+                  hg: 300,
+                  tittle: 'Tabla',
+                  txtFZ: 14),
             )
           ],
         ),

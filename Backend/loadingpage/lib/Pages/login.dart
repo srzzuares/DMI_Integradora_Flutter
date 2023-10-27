@@ -6,9 +6,15 @@ import 'package:loadingpage/Components/TextField.dart';
 import 'package:loadingpage/Pages/recovery.dart';
 import 'package:loadingpage/Pages/register.dart';
 
-class LoginPage extends StatelessWidget {
+// ignore: must_be_immutable
+class LoginPage extends StatefulWidget {
   LoginPage({super.key});
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
+  bool isChecked = false;
   // text editing controllers
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -70,13 +76,35 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        'Recordar Contraseña',
-                        style: TextStyle(
-                            color: Color(0xFF78716c),
-                            fontFamily: 'rdl',
-                            fontSize: 11),
+                      Theme(
+                        data: ThemeData()
+                            .copyWith(unselectedWidgetColor: Color(0xFF292524)),
+                        child: Checkbox(
+                            value: isChecked,
+                            activeColor: Color(0xFF292524),
+                            tristate: true,
+                            onChanged: (sss) {
+                              setState(() {
+                                isChecked = !isChecked;
+                              });
+                            }),
                       ),
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isChecked = !isChecked;
+                            });
+                          },
+                          child: Text(
+                            'Recordar Contraseña',
+                            style: TextStyle(
+                                fontFamily: 'rdl',
+                                fontSize: 12,
+                                color: Color(0xFF78716C)),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
