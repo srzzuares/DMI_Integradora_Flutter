@@ -67,12 +67,15 @@ class _HomePageState extends State<HomePage> {
                 child: Image.asset('assets/images/trofeo.png',
                     width: 200, height: 200),
               ),
-              MyCard(
-                wd: 400,
-                hg: 400,
-                tittle: 'Tabla',
-                txt: '-----',
-                txtFZ: 13,
+              Container(
+                padding: EdgeInsets.only(left: 20, right: 20, top: 10),
+                child: MyCard(
+                  wd: 400,
+                  hg: 400,
+                  tittle: 'Tabla',
+                  txt: '-----',
+                  txtFZ: 13,
+                ),
               ),
             ],
           ),
