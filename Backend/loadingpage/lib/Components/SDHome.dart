@@ -11,13 +11,19 @@ class SDH_Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(user);
+    String? name = user.displayName!;
+    String email = user.email;
+    String? photo = user.photoUrl!;
+    print(name);
+    print(email);
+    print(photo);
     return ZoomDrawer(
         angle: 0,
         borderRadius: 40,
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMHo_M(),
-        mainScreen: HomePage(userdt: user));
+        menuScreen: SMHo_M(userName: name, correo: email, Photo: photo),
+        mainScreen: HomePage(Photo: photo));
   }
 }

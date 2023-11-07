@@ -4,7 +4,14 @@ import 'package:loadingpage/Components/SMHome.dart';
 import 'package:loadingpage/Pages/scoreBoard.dart';
 
 class SDS_Score extends StatelessWidget {
-  const SDS_Score({super.key});
+  final String userName;
+  final String Photo;
+  final String correo;
+  SDS_Score(
+      {super.key,
+      required this.userName,
+      required this.Photo,
+      required this.correo});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +21,13 @@ class SDS_Score extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMHo_M(),
-        mainScreen: ScoreBoardPage());
+        menuScreen: SMHo_M(
+          userName: userName,
+          correo: correo,
+          Photo: Photo,
+        ),
+        mainScreen: ScoreBoardPage(
+          Photo: Photo,
+        ));
   }
 }

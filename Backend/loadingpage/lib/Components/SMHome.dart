@@ -4,6 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:loadingpage/Components/SDAbout.dart';
 import 'package:loadingpage/Components/SDHistory.dart';
 import 'package:loadingpage/Components/SDHome.dart';
+import 'package:loadingpage/Components/SDHome1.dart';
 import 'package:loadingpage/Components/SDScore.dart';
 import 'package:loadingpage/Components/SDUP.dart';
 import 'package:loadingpage/Components/SDValoracion.dart';
@@ -11,7 +12,15 @@ import 'package:loadingpage/Pages/login.dart';
 import 'package:loadingpage/services/googleSignInApi.dart';
 
 class SMHo_M extends StatelessWidget {
-  const SMHo_M({super.key});
+  final String userName;
+  final String Photo;
+  final String correo;
+
+  SMHo_M(
+      {super.key,
+      required this.userName,
+      required this.Photo,
+      required this.correo});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +39,7 @@ class SMHo_M extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 10,
             ),
             Center(
               child: Container(
@@ -44,39 +53,47 @@ class SMHo_M extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SDUP_UserProfile(),
+                        builder: (BuildContext context) => SDUP_UserProfile(
+                          userName: userName,
+                          correo: correo,
+                          Photo: Photo,
+                        ),
                       ),
                     );
                   },
                   child: Column(
                     children: [
-                      Icon(
-                        Icons.person_4_rounded,
-                        size: 100,
-                        color: Color(0xFFfafaf9),
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(Photo),
                       ),
-                      Text(
-                        'Username',
-                        style: TextStyle(
-                            color: Color(0xFFfafaf9),
-                            fontFamily: 'rdl2',
-                            fontSize: 16),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            userName,
+                            style: TextStyle(
+                                color: Color(0xFFfafaf9),
+                                fontFamily: 'rdl2',
+                                fontSize: 14),
+                          ),
+                        ),
                       )
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 30),
             Column(
               children: [
                 ListTile(
                   onTap: () {
-                    // Navigator.of(context).pushReplacement(
-                    //   MaterialPageRoute(
-                    //     builder: (BuildContext context) => SDH_Home(user: null,),
-                    //   ),
-                    // );
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => SDH_Home1(
+                            name: userName, email: correo, photo: Photo),
+                      ),
+                    );
                   },
                   leading: Icon(
                     Icons.leaderboard_outlined,
@@ -93,7 +110,11 @@ class SMHo_M extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SDS_Score(),
+                        builder: (BuildContext context) => SDS_Score(
+                          userName: userName,
+                          correo: correo,
+                          Photo: Photo,
+                        ),
                       ),
                     );
                   },
@@ -112,7 +133,11 @@ class SMHo_M extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SDUP_UserProfile(),
+                        builder: (BuildContext context) => SDUP_UserProfile(
+                          userName: userName,
+                          correo: correo,
+                          Photo: Photo,
+                        ),
                       ),
                     );
                   },
@@ -131,7 +156,11 @@ class SMHo_M extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SDH_History(),
+                        builder: (BuildContext context) => SDH_History(
+                          userName: userName,
+                          correo: correo,
+                          Photo: Photo,
+                        ),
                       ),
                     );
                   },
@@ -150,7 +179,11 @@ class SMHo_M extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SDA_About(),
+                        builder: (BuildContext context) => SDA_About(
+                          userName: userName,
+                          correo: correo,
+                          Photo: Photo,
+                        ),
                       ),
                     );
                   },
@@ -169,7 +202,11 @@ class SMHo_M extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (BuildContext context) => SDV_Valoracion(),
+                        builder: (BuildContext context) => SDV_Valoracion(
+                          userName: userName,
+                          correo: correo,
+                          Photo: Photo,
+                        ),
                       ),
                     );
                   },

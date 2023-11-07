@@ -6,31 +6,40 @@ import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para co
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class userProfileSettigs extends StatefulWidget {
-  const userProfileSettigs({super.key});
+  final String Photo;
+
+  const userProfileSettigs({super.key, required this.Photo});
   @override
-  State<userProfileSettigs> createState() => _userProfileSettigsState();
+  State<userProfileSettigs> createState() =>
+      _userProfileSettigsState(Photo: Photo);
 }
 
 class _userProfileSettigsState extends State<userProfileSettigs> {
+  final String Photo;
+
+  _userProfileSettigsState({required this.Photo});
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-            color: Color(0xFF292524),
-            icon: const Icon(
-              Icons.person_4_rounded,
-              size: 40,
+          Container(
+            padding: EdgeInsets.only(right: 8),
+            child: GestureDetector(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(Photo),
+                radius: 15,
+              ),
+              onTap: () {
+                if (ZoomDrawer.of(context)!.isOpen()) {
+                  ZoomDrawer.of(context)!.close();
+                } else {
+                  ZoomDrawer.of(context)!.open();
+                }
+              },
             ),
-            onPressed: () {
-              if (ZoomDrawer.of(context)!.isOpen()) {
-                ZoomDrawer.of(context)!.close();
-              } else {
-                ZoomDrawer.of(context)!.open();
-              }
-            },
-          ),
+          )
         ],
         leading: IconButton(
           color: Color(0xFF292524),

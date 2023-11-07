@@ -4,40 +4,40 @@
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:loadingpage/Components/MyCard.dart';
-import 'package:loadingpage/services/googleSignInApi.dart';
 
 class HomePage extends StatefulWidget {
-  final GoogleSignInAccount userdt;
-  HomePage({super.key, required this.userdt});
+  final String Photo;
+  HomePage({super.key, required this.Photo});
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState(Photo: Photo);
 }
 
 class _HomePageState extends State<HomePage> {
-  // String foto = userdt.photoUrl!;
-  // var nombre = userdt.displayName!;
-  // String correo = userdt.email;
+  final String Photo;
+
+  _HomePageState({required this.Photo});
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-            color: Color(0xFF292524),
-            icon: const Icon(
-              Icons.person_4_rounded,
-              size: 40,
+          Container(
+            padding: EdgeInsets.only(right: 8),
+            child: GestureDetector(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(Photo),
+                radius: 15,
+              ),
+              onTap: () {
+                if (ZoomDrawer.of(context)!.isOpen()) {
+                  ZoomDrawer.of(context)!.close();
+                } else {
+                  ZoomDrawer.of(context)!.open();
+                }
+              },
             ),
-            onPressed: () {
-              if (ZoomDrawer.of(context)!.isOpen()) {
-                ZoomDrawer.of(context)!.close();
-              } else {
-                ZoomDrawer.of(context)!.open();
-              }
-            },
-          ),
+          )
         ],
         leading: IconButton(
           color: Color(0xFF292524),

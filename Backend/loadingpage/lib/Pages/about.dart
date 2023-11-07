@@ -5,31 +5,37 @@ import 'package:loadingpage/Components/MyCardGreen.dart';
 
 // ignore: must_be_immutable
 class AboutPage extends StatefulWidget {
-  AboutPage({super.key});
+  final String Photo;
+  AboutPage({super.key, required this.Photo});
   @override
-  _AboutPageState createState() => _AboutPageState();
+  _AboutPageState createState() => _AboutPageState(Photo: Photo);
 }
 
 class _AboutPageState extends State<AboutPage> {
+  final String Photo;
+
+  _AboutPageState({required this.Photo});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-            color: Color(0xFF292524),
-            icon: const Icon(
-              Icons.person_4_rounded,
-              size: 40,
+          Container(
+            padding: EdgeInsets.only(right: 8),
+            child: GestureDetector(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(Photo),
+                radius: 15,
+              ),
+              onTap: () {
+                if (ZoomDrawer.of(context)!.isOpen()) {
+                  ZoomDrawer.of(context)!.close();
+                } else {
+                  ZoomDrawer.of(context)!.open();
+                }
+              },
             ),
-            onPressed: () {
-              if (ZoomDrawer.of(context)!.isOpen()) {
-                ZoomDrawer.of(context)!.close();
-              } else {
-                ZoomDrawer.of(context)!.open();
-              }
-            },
-          ),
+          )
         ],
         leading: IconButton(
           color: Color(0xFF292524),

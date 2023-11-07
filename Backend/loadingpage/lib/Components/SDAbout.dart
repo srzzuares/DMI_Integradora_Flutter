@@ -4,8 +4,14 @@ import 'package:loadingpage/Components/SMHome.dart';
 import 'package:loadingpage/Pages/about.dart';
 
 class SDA_About extends StatelessWidget {
-  const SDA_About({super.key});
-
+  final String userName;
+  final String Photo;
+  final String correo;
+  SDA_About(
+      {super.key,
+      required this.userName,
+      required this.Photo,
+      required this.correo});
   @override
   Widget build(BuildContext context) {
     return ZoomDrawer(
@@ -14,7 +20,11 @@ class SDA_About extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMHo_M(),
-        mainScreen: AboutPage());
+        menuScreen: SMHo_M(
+          userName: userName,
+          correo: correo,
+          Photo: Photo,
+        ),
+        mainScreen: AboutPage(Photo: Photo));
   }
 }

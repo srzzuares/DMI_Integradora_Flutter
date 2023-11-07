@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:loadingpage/Components/SMHome.dart';
-import 'package:loadingpage/Pages/history.dart';
+import 'package:loadingpage/Pages/home.dart';
 
-class SDH_History extends StatelessWidget {
-  final String userName;
-  final String Photo;
-  final String correo;
-  SDH_History(
+class SDH_Home1 extends StatelessWidget {
+  final String name;
+  final String email;
+  final String photo;
+  const SDH_Home1(
       {super.key,
-      required this.userName,
-      required this.Photo,
-      required this.correo});
+      required this.name,
+      required this.email,
+      required this.photo});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +22,9 @@ class SDH_History extends StatelessWidget {
         mainScreenScale: 0.1,
         showShadow: true,
         drawerShadowsBackgroundColor: Color.fromARGB(255, 197, 195, 195),
-        menuScreen: SMHo_M(
-          userName: userName,
-          correo: correo,
-          Photo: Photo,
-        ),
-        mainScreen: HistoryPage(
-          Photo: Photo,
+        menuScreen: SMHo_M(userName: name, correo: email, Photo: photo),
+        mainScreen: HomePage(
+          Photo: photo,
         ));
   }
 }

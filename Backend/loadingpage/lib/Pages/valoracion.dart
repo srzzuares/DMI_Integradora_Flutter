@@ -6,31 +6,37 @@ import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para co
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class ValoracionPage extends StatefulWidget {
-  const ValoracionPage({super.key});
+  final String Photo;
+  const ValoracionPage({super.key, required this.Photo});
   @override
-  State<ValoracionPage> createState() => _ValoracionPageState();
+  State<ValoracionPage> createState() => _ValoracionPageState(Photo: Photo);
 }
 
 class _ValoracionPageState extends State<ValoracionPage> {
+  final String Photo;
+
+  _ValoracionPageState({required this.Photo});
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-            color: Color(0xFF292524),
-            icon: const Icon(
-              Icons.person_4_rounded,
-              size: 40,
+          Container(
+            padding: EdgeInsets.only(right: 8),
+            child: GestureDetector(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(Photo),
+                radius: 15,
+              ),
+              onTap: () {
+                if (ZoomDrawer.of(context)!.isOpen()) {
+                  ZoomDrawer.of(context)!.close();
+                } else {
+                  ZoomDrawer.of(context)!.open();
+                }
+              },
             ),
-            onPressed: () {
-              if (ZoomDrawer.of(context)!.isOpen()) {
-                ZoomDrawer.of(context)!.close();
-              } else {
-                ZoomDrawer.of(context)!.open();
-              }
-            },
-          ),
+          )
         ],
         leading: IconButton(
           color: Color(0xFF292524),
