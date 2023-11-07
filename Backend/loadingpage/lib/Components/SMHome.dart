@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:loadingpage/Components/SDAbout.dart';
 import 'package:loadingpage/Components/SDHistory.dart';
 import 'package:loadingpage/Components/SDHome.dart';
@@ -7,6 +8,7 @@ import 'package:loadingpage/Components/SDScore.dart';
 import 'package:loadingpage/Components/SDUP.dart';
 import 'package:loadingpage/Components/SDValoracion.dart';
 import 'package:loadingpage/Pages/login.dart';
+import 'package:loadingpage/services/googleSignInApi.dart';
 
 class SMHo_M extends StatelessWidget {
   const SMHo_M({super.key});
@@ -70,11 +72,11 @@ class SMHo_M extends StatelessWidget {
               children: [
                 ListTile(
                   onTap: () {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => SDH_Home(),
-                      ),
-                    );
+                    // Navigator.of(context).pushReplacement(
+                    //   MaterialPageRoute(
+                    //     builder: (BuildContext context) => SDH_Home(user: null,),
+                    //   ),
+                    // );
                   },
                   leading: Icon(
                     Icons.leaderboard_outlined,
@@ -184,7 +186,8 @@ class SMHo_M extends StatelessWidget {
                 ),
                 const SizedBox(height: 60),
                 ListTile(
-                  onTap: () {
+                  onTap: () async {
+                    await GoogleSignInApi.logout();
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
                         builder: (BuildContext context) => LoginPage(),

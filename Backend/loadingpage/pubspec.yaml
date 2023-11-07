@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_zoom_drawer: ^3.1.1
+  google_sign_in: ^5.0.3
+  shared_preferences: ^2.0.10
   cupertino_icons: ^1.0.2
 
 dev_dependencies:

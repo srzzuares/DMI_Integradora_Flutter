@@ -114,13 +114,15 @@ class _ConditionPageState extends State<ConditionPage> {
                   Center(
                     child: Button(
                       onTap: () {
-                        if (isChecked) {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (BuildContext context) => SDH_Home(),
-                            ),
-                          );
-                        }
+                        // if (isChecked) {
+                        //   Navigator.of(context).pushReplacement(
+                        //     MaterialPageRoute(
+                        //       builder: (BuildContext context) => SDH_Home(
+                        //         user: null,
+                        //       ),
+                        //     ),
+                        //   );
+                        // }
                       },
                       txt: 'Comenzar',
                     ),

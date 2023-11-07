@@ -5,6 +5,7 @@ import 'package:loadingpage/Components/SDHome.dart';
 import 'package:loadingpage/Components/TextField.dart';
 import 'package:loadingpage/Pages/recovery.dart';
 import 'package:loadingpage/Pages/register.dart';
+import 'package:loadingpage/services/googleSignInApi.dart';
 
 // ignore: must_be_immutable
 class LoginPage extends StatefulWidget {
@@ -142,11 +143,13 @@ class _LoginPageState extends State<LoginPage> {
                     // sign in button
                     Button(
                       onTap: () {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => SDH_Home(),
-                          ),
-                        );
+                        // Navigator.of(context).pushReplacement(
+                        //   MaterialPageRoute(
+                        //     builder: (BuildContext context) => SDH_Home(
+                        //       user: null,
+                        //     ),
+                        //   ),
+                        // );
                       },
                       txt: 'Entrar',
                     ),
@@ -202,15 +205,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     // google button
                     LogoLogin(
-                      imagePath: 'assets/images/google.png',
-                      onTap: () {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => SDH_Home(),
-                          ),
-                        );
-                      },
-                    ),
+                        imagePath: 'assets/images/google.png', onTap: signIn),
 
                     SizedBox(width: 25),
 
@@ -218,11 +213,13 @@ class _LoginPageState extends State<LoginPage> {
                     LogoLogin(
                       imagePath: 'assets/images/facebook.png',
                       onTap: () {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => SDH_Home(),
-                          ),
-                        );
+                        // Navigator.of(context).pushReplacement(
+                        //   MaterialPageRoute(
+                        //     builder: (BuildContext context) => SDH_Home(
+                        //       user: ,
+                        //     ),
+                        //   ),
+                        // );
                       },
                     ),
 
@@ -232,11 +229,13 @@ class _LoginPageState extends State<LoginPage> {
                     LogoLogin(
                       imagePath: 'assets/images/GitHub2000.png',
                       onTap: () {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => SDH_Home(),
-                          ),
-                        );
+                        // Navigator.of(context).pushReplacement(
+                        //   MaterialPageRoute(
+                        //     builder: (BuildContext context) => SDH_Home(
+                        //       user: null,
+                        //     ),
+                        //   ),
+                        // );
                       },
                     )
                   ],
@@ -249,5 +248,17 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  Future signIn() async {
+    final user = await GoogleSignInApi.login();
+
+    if (user == null) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text('Falló al iniciar sesión')));
+    } else {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => SDH_Home(user: user)));
+    }
   }
 }

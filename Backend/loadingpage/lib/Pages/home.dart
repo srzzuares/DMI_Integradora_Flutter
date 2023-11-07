@@ -4,15 +4,21 @@
 // Docente: MTI. Marco Antonio Ramirez Hernandez
 import 'package:flutter/material.dart'; // Importa la biblioteca Flutter para construir interfaces de usuario.
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:loadingpage/Components/MyCard.dart';
+import 'package:loadingpage/services/googleSignInApi.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final GoogleSignInAccount userdt;
+  HomePage({super.key, required this.userdt});
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  // String foto = userdt.photoUrl!;
+  // var nombre = userdt.displayName!;
+  // String correo = userdt.email;
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
