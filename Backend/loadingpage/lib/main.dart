@@ -22,6 +22,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: SplashScreen(),
     theme: ThemeData.dark(),
+    title: 'Guardian de Flor',
     // routes: {
     //   "Home": (BuildContext context) => SDH_Home(),
     //   'About': (context) => SDA_About(),
