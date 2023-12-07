@@ -28,8 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
   bool _isLoading = true;
 
   void _simulateLoading() {
-    const totalDuration = Duration(seconds: 25);
-    const intervalDuration = Duration(seconds: 5);
+    const totalDuration = Duration(seconds: 5);
+    const intervalDuration = Duration(seconds: 1);
     int intervals = 0;
 
     Timer.periodic(intervalDuration, (timer) {
